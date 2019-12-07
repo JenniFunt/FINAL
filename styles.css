@@ -1,0 +1,316 @@
+
+
+
+body p{
+  align-content: center;
+  /* font-family: 'Bowlby One SC', cursive;
+  font-family: 'Righteous', cursive;
+  font-family: 'Anton', sans-serif;
+  font-family: 'Francois One', sans-serif
+  font-family: 'Fjalla One', sans-serif;
+  font-family: 'Sigmar One', cursive;
+  font-family: 'Staatliches', cursive;
+  font-family: 'Playfair Display', sans-serif;*/
+  font-family: 'Francois One', sans-serif;
+  font-family: 'Righteous', cursive;
+  font-size: 45px;
+  padding: 8vh;
+  letter-spacing: 2px;
+
+
+}
+.content p{
+  font-family: 'Righteous', cursive;
+  font-size: 35px;
+  font-weight: lighter;
+  width: 90vw;
+  position: fixed center;
+  text-align: center;
+  padding: 5vh;
+  letter-spacing: 4px;
+
+}
+
+.content a{
+  text-decoration: none;
+  color: #8C96FF;
+}
+.content a:visited {
+  color: #8C96FF;
+}
+.content a:active {
+  color: #8C96FF;
+}
+.content a:hover {
+  color: #8A6FE8;
+}
+
+
+
+/* Navigation Menu - Background */
+.navigation {
+  /* critical sizing and position styles */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+
+  /* non-critical appearance styles */
+  list-style: none;
+  background: #8C96FF;
+}
+
+/* Navigation Menu - List items */
+.nav-item {
+  /* non-critical appearance styles */
+  width: 200px;
+  border-top: 1px solid #8C96FF;
+  border-bottom: 1px solid #8C96FF;
+}
+
+.nav-item a {
+  /* non-critical appearance styles */
+  display: block;
+  padding: 1.2em;
+  background: #8C96FF;
+  color: white;
+  font-family: 'Francois One', sans-serif;
+  font-size: 1.2em;
+  text-decoration: none;
+  /* transition: color 0.2s, background 0.5s; */
+}
+
+.nav-item a:hover {
+  color: white;
+  background: linear-gradient(135deg, #8C96FF 0%,#8A74E8 100%);
+}
+
+/* Site Wrapper - Everything that isn't navigation */
+.site-wrap {
+  /* Critical position and size styles */
+  min-height: 100%;
+  width: 100vw;
+  background-color: white; /* Needs a background or else the nav will show through */
+  position: absolute;
+  top: 0;
+  /* bottom: 100%; */
+  left: 0;
+  z-index: 1;
+
+  /* non-critical apperance styles */
+  /* padding: 4em; */
+  background-color: white;
+  background-size: 200%;
+
+}
+
+#home-site-wrap {
+  display: flex;
+}
+
+#home-site-wrap .content {
+  align-self: center;
+}
+
+/* Nav Trigger */
+.nav-trigger {
+  /* critical styles - hide the checkbox input */
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+label[for="nav-trigger"] {
+  /* critical positioning styles */
+  position: fixed;
+  left: 15px; top: 15px;
+  z-index: 2;
+
+  /* non-critical apperance styles */
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+  background-size: contain;
+}
+
+/* Make the Magic Happen */
+.nav-trigger + label, .site-wrap {
+  transition: left 0.2s;
+}
+
+.nav-trigger:checked + label {
+  left: 215px;
+}
+
+.nav-trigger:checked ~ .site-wrap {
+  left: 200px;
+  box-shadow: 0 0 5px 5px #8C96FF;
+}
+
+
+p img {
+  height: 1em;
+  width: auto;
+}
+
+.rot-img {
+  -webkit-transition: -webkit-transform 2s ease-in-out;
+}
+/* .rot-img {
+  -webkit-transform: rotate(360deg);
+} */
+.rot-img:hover {
+  -webkit-transform: rotate(360deg);
+}
+
+
+.bounce-img:hover {
+  animation: bounce 0.5s;
+}
+@keyframes bounce {
+  0% { transform: translate(0px, 0px); }
+  50% { transform: translate(0px, -50%); }
+  100% { transform: translate(0px, 0px); }
+}
+
+.header p{
+  font-size: 20px;
+  font-family: 'Francois One', sans-serif;
+  text-align: center;
+}
+
+
+/* photography page */
+.fullWidth {
+  grid-column-start: 0;
+  grid-column-end: span 4;
+}
+
+
+.section {
+  border-top: 1vh;
+  grid-column-start: 0;
+  grid-column-end: span 4;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1vmin;
+  grid-row-gap: 1vmin;
+  /* margin-top: 1vh; */
+  /* margin-bottom: 10vh; */
+}
+
+/*games page */
+.fullWidthGames {
+  grid-column-start: 0;
+  grid-column-end: span 1;
+}
+
+
+.sectionGames {
+  border-top: 1vh;
+  grid-column-start: 0;
+  grid-column-end: span 1;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 1vmin;
+  grid-row-gap: 1vmin;
+  margin-top: 1vh;
+  margin-bottom: 10vh;
+  padding-left: 10vmin;
+  padding-right: 10vmin;
+}
+
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/* resume page */
+
+.resumeplace{
+
+  margin: 5;
+  /* background-image: url("resume.png"); */
+  padding-left: 10vmin;
+
+
+  /* Full height */
+  height: 125%;
+
+
+  /* Center and scale the image nicely */
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+}
+
+
+/* contact page */
+
+
+input[type=text], select, textarea {
+  width: 100vw; /* Full width */
+  padding: 20px; /* Some padding */
+  border: 1px solid #BDC8FF; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #8C96FF;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Francois One', sans-serif;
+  font-size: 15px;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #8A6FE8;
+}
+
+/* Add a background color and some padding around the form */
+.container ul{
+  font-family: 'Francois One', sans-serif;
+  font-size: 20px;
+  color: #7C68E8;
+  display: grid;
+  align-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #DEE1FD;
+  padding: 50px;
+}
+
+.header h1{
+  font-family: 'Righteous', cursive;
+  color: #8A6FE8;
+  font-size: 45px;
+  font-weight: lighter;
+  text-align: left;
+  padding: 5vh;
+  letter-spacing: 4px;
+}
+.header h2{
+  font-family: 'Francois One', sans-serif;
+  font-size: 22px;
+  font-weight: lighter;
+  text-align: left;
+  padding: 5vh;
+  letter-spacing: 6px;
+}
