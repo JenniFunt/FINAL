@@ -1,16 +1,9 @@
 
-
+/* home page text styles */
 
 body p{
   align-content: center;
-  /* font-family: 'Bowlby One SC', cursive;
-  font-family: 'Righteous', cursive;
-  font-family: 'Anton', sans-serif;
-  font-family: 'Francois One', sans-serif
-  font-family: 'Fjalla One', sans-serif;
-  font-family: 'Sigmar One', cursive;
-  font-family: 'Staatliches', cursive;
-  font-family: 'Playfair Display', sans-serif;*/
+  font-family: 'PT Sans Narrow', sans-serif;
   font-family: 'Francois One', sans-serif;
   font-family: 'Righteous', cursive;
   font-size: 45px;
@@ -31,6 +24,43 @@ body p{
 
 }
 
+
+/* home page emoji styles  */
+
+
+p img {
+  height: 1em;
+  width: auto;
+}
+
+.rot-img {
+  -webkit-transition: -webkit-transform 2s ease-in-out;
+}
+
+.rot-img:hover {
+  -webkit-transform: rotate(360deg);
+}
+
+
+.bounce-img:hover {
+  animation: bounce 0.5s;
+}
+@keyframes bounce {
+  0% { transform: translate(0px, 0px); }
+  50% { transform: translate(0px, -50%); }
+  100% { transform: translate(0px, 0px); }
+}
+
+/* home page for mobile */
+
+@media only screen and (max-width: 600px) {
+  .content p{
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+
+}
+
 .content a{
   text-decoration: none;
   color: #8C96FF;
@@ -48,6 +78,8 @@ body p{
 
 
 /* Navigation Menu - Background */
+
+
 .navigation {
   /* critical sizing and position styles */
   width: 100%;
@@ -152,39 +184,32 @@ label[for="nav-trigger"] {
 }
 
 
-p img {
-  height: 1em;
-  width: auto;
-}
-
-.rot-img {
-  -webkit-transition: -webkit-transform 2s ease-in-out;
-}
-/* .rot-img {
-  -webkit-transform: rotate(360deg);
-} */
-.rot-img:hover {
-  -webkit-transform: rotate(360deg);
-}
 
 
-.bounce-img:hover {
-  animation: bounce 0.5s;
-}
-@keyframes bounce {
-  0% { transform: translate(0px, 0px); }
-  50% { transform: translate(0px, -50%); }
-  100% { transform: translate(0px, 0px); }
-}
 
+/* game and photography pages text and headers  */
+
+
+.header h3{
+  color: #8A6FE8;
+  font-size: 45px;
+  font-family: 'Righteous', cursive;
+  text-align: center;
+  padding: 5vh;
+  letter-spacing: 4px;
+}
 .header p{
   font-size: 20px;
-  font-family: 'Francois One', sans-serif;
-  text-align: center;
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-align: left;
+  letter-spacing: 3px;
+  line-height: 30px;
 }
 
 
 /* photography page */
+
+
 .fullWidth {
   grid-column-start: 0;
   grid-column-end: span 4;
@@ -205,25 +230,27 @@ p img {
 }
 
 /*games page */
+
+
 .fullWidthGames {
   grid-column-start: 0;
-  grid-column-end: span 1;
+  grid-column-end: span 2;
 }
 
 
 .sectionGames {
   border-top: 1vh;
-  grid-column-start: 0;
-  grid-column-end: span 1;
+  grid-column-start: 1;
+  grid-column-end: span 2;
   background-color: white;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 1vmin;
   grid-row-gap: 1vmin;
   margin-top: 1vh;
   margin-bottom: 10vh;
-  padding-left: 10vmin;
-  padding-right: 10vmin;
+  /* padding-left: 10vmin;
+  padding-right: 10vmin; */
 }
 
 
@@ -253,7 +280,7 @@ img {
 }
 
 
-/* contact page */
+/* contact page !!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 
 input[type=text], select, textarea {
@@ -307,10 +334,43 @@ input[type=submit]:hover {
   letter-spacing: 4px;
 }
 .header h2{
-  font-family: 'Francois One', sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   font-size: 22px;
   font-weight: lighter;
   text-align: left;
   padding: 5vh;
-  letter-spacing: 6px;
+  letter-spacing: 4.5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container ul{
+    font-family: 'Francois One', sans-serif;
+    font-size: 15px;
+    color: #7C68E8;
+    display: grid;
+    align-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #DEE1FD;
+    padding: 1px;
+  }
+
+  .header h1{
+    font-family: 'Righteous', cursive;
+    color: #8A6FE8;
+    font-size: 35px;
+    font-weight: lighter;
+    text-align: left;
+    padding: 2vh;
+    letter-spacing: 4px;
+  }
+  .header h2{
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: left;
+    padding: 3vh;
+    letter-spacing: 2px;
+  }
+
 }
